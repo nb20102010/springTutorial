@@ -3,6 +3,7 @@ package com.service;
 public class UserService {
 	
 	private String name;
+	private ByeService b;
 
 	/**
 	 * @return the name
@@ -18,8 +19,17 @@ public class UserService {
 		this.name = name;
 	}
 	
+	public ByeService getB() {
+		return b;
+	}
+
+	public void setB(ByeService b) {
+		this.b = b;
+	}
+
 	public void sayHello() {
 		System.out.println("Hello, " + this.name);
+		this.getB().sayBye();
 	}
 	
 }

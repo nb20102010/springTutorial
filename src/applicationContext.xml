@@ -7,9 +7,13 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<bean id="userService" class="com.service.UserService">
-		<property name="name">
-			<value>World</value>
-		</property>
+		<property name="name" value="World"></property>
+		<property name="b" ref="byeService"></property>
 	</bean>
+	
+	<bean id="byeService" class="com.service.ByeService">
+		<property name="name" value="DaChui"></property>
+	</bean>
+	
 
 </beans>    
