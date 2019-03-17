@@ -15,6 +15,13 @@
     <bean id="changeLetter" class="com.hsp.inter.changeToLower">
         <property name="str" value="HIJKL"></property>
     </bean>
+    
+	<bean id="student1" scope="singleton" class="com.hsp.inter.Student">
+		<property name="name" value="Xiaoming"></property>
+	</bean> 
+	 
+	<bean id="student2" scope="prototype" class="com.hsp.inter.Student">
+		<property name="name" value="Xiaohua"></property>
+	</bean>
 	
-
 </beans>    
