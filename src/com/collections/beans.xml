@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"
+    xmlns:aop="http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+	
+	<bean id="department" class="com.collections.Department">
+		<property name="name" value="accounting"></property>
+		<property name="empName">
+			<list>
+				<value>Xiao Ming</value>
+				<value>Xiao Gang</value>
+				<value>Xiao Hua</value>
+			</list>
+		</property>
+		<property name="empList">
+			<list>
+				<ref bean="emp1"/>
+				<ref bean="emp2"/>
+				<ref bean="emp1"/>
+			</list>
+		</property>
+		<property name="empSet">
+			<set>
+				<ref bean="emp2"/>
+				<ref bean="emp1"/>
+				<ref bean="emp1"/>								
+			</set>
+		</property>
+		<property name="empMap">
+			<map>
+				<entry key="1" value-ref="emp1"></entry>
+				<entry key='2' value-ref="emp2"></entry>
+			</map>
+		</property>
+		
+	</bean>
+	
+	<bean id="emp1" class="com.collections.Employee">
+		<property name="name" value="Beijing"></property>
+	</bean>
+	
+	<bean id="emp2" class="com.collections.Employee">
+		<property name="name" value="Tianjin"></property>
+	</bean>
+	
+</beans>    

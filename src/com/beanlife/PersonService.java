@@ -1,5 +1,7 @@
 package com.beanlife;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
@@ -17,7 +19,7 @@ public class PersonService implements BeanNameAware,BeanFactoryAware,Application
 	public PersonService() {
 		System.out.println("1. Constructor 1 is executed.");
 	}
-
+	
 	public PersonService(String name, int age) {
 		System.out.println("1. Constructor 2 is executed.");
 		this.name = name;
@@ -86,6 +88,7 @@ public class PersonService implements BeanNameAware,BeanFactoryAware,Application
 		System.out.println("7. afterPropertiesSet() is executed.");
 	}
 	
+	@PostConstruct
 	public void init() {
 		System.out.println("8. My own init method");
 	}
