@@ -1,0 +1,26 @@
+1 instantiation (when the program loads beans.xml), instantiate beans (if scope="singleton") to memory 
+ 
+	1.1 use "constructor-arg" to select specific constructor method
+	 	bean will choose the last constructor which satisfies the arguments we set. 
+
+2 call 'set' method to inject properties
+ 
+3 If 'BeanNameAware' interface is implemented, we can use setBeanName method to get the bean id.
+
+4 If 'BeanFactoryAware' interface is implemented, we can use setBeanFactoryName method to get factory name
+
+5 If 'ApplicationContextAware' interface is implemented, we can use setApplicationContext method to get context.
+
+6 If connecting a postProcessor, the methods 'postProcessBeforeInitialization' and 'postProcessAfterInitialization' for every singleton bean's instantiation. This somehow shows the concept of AOP
+
+	6.1 public Object postProcessBeforeInitialization(Object bean, String beanId);
+	
+	6.2 public Object postProcessAfterInitialization(Object bean, String beanId);
+
+7 If 'InitializingBean' is implemented, afterPropertiesSet() will be executed between 6.1 and 6.2
+
+8 If we in add an 'init-method' in bean, then we can define our own initialization method between 6.1 and 6.2
+
+9 Implement 'DisposableBean' interface to define our own destruction method. 
+
+beans created by bean factory will have a relatively simple life cycle.
