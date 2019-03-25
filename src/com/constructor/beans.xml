@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"
+    xmlns:aop="http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+	
+    <bean id="employee" class="com.constructor.Employee">
+        <constructor-arg name="name" value="Xiao Ming" />
+        <constructor-arg name="age" value="25"/>
+    </bean>
+    
+    <bean id="employee2" class="com.constructor.Employee">
+        <constructor-arg index="0" type="java.lang.String" value="Xiao Gang"/>
+        <constructor-arg index="1" type="int" value="22"/>
+    </bean>
+	
+</beans>    
