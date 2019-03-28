@@ -1,4 +1,4 @@
-package com.beanlife;
+package com.lr.beanlife;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;

@@ -1,4 +1,4 @@
-package com.collections;
+package com.lr.collections;
 
 public class Employee {
 	

@@ -1,4 +1,4 @@
-package com.inherit;
+package com.lr.inherit;
 
 public class Student {
 	

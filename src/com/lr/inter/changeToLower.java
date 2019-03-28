@@ -1,4 +1,4 @@
-package com.hsp.inter;
+package com.lr.inter;
 
 public class changeToLower implements changeLetterCase {
 	

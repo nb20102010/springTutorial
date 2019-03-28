@@ -1,4 +1,4 @@
-package com.hsp.inter;
+package com.lr.inter;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

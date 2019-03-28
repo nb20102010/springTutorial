@@ -1,4 +1,4 @@
-package com.constructor;
+package com.lr.constructor;
 
 public class Employee {
 	

@@ -1,4 +1,4 @@
-package com.collections;
+package com.lr.collections;
 
 import java.util.Arrays;
 import java.util.stream.Stream;

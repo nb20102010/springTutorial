@@ -1,4 +1,4 @@
-package com.inherit;
+package com.lr.inherit;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

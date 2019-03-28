@@ -1,4 +1,4 @@
-package com.beanlife;
+package com.lr.beanlife;
 
 import javax.annotation.PostConstruct;
 
