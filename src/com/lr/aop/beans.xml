@@ -14,8 +14,19 @@
     </bean>
     
     <bean id="myMethodBeforeAdvice" class="com.lr.aop.MyMethodBeforeAdvice"></bean>
+    <bean id="myAfterReturningAdvice" class="com.lr.aop.MyAfterReturningAdvice"></bean>
+    <bean id="myAroundInvoking" class="com.lr.aop.MyAroundInvoking"></bean>
+    <bean id="myThrowsAdvice" class="com.lr.aop.MyThrowsAdvice"></bean>
+    <bean id="myMethodBeforeAdviceFilter" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+    	<property name="advice" ref="myMethodBeforeAdvice"></property>
+    	<property name="mappedNames">
+    	    <list>
+    	        <value>sayBye</value>
+    	    </list>
+    	</property>
+    </bean>
     
-    <bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">    	
     	<property name="proxyInterfaces">
     		<list>
     			<value>com.lr.aop.TestServiceInterface</value>
@@ -24,13 +35,19 @@
     	</property>
     	
     	<property name="interceptorNames">
-    		<value>myMethodBeforeAdvice</value>
+    	    <list>
+    	        <value>myMethodBeforeAdviceFilter</value>
+    			<value>myAfterReturningAdvice</value>
+    			<value>myAroundInvoking</value>
+    			<value>myThrowsAdvice</value>
+    	    </list>    		
     	</property>
     	
     	<property name="target">
     		<ref bean="test1Service"/>
     	</property>
     </bean>
+    
     
     
 	
